@@ -11,6 +11,8 @@ class Solution {
 
     void part(String s, List<String> arr, List<List<String>> ans) {
         if (s.length() == 0) {
+            //cant do this 
+            //ans.add(arr) // as then arr is passed as reference and points to empty list
             ans.add(new ArrayList<>(arr));//deep copy aise bnti !!!!
             return;
         }
