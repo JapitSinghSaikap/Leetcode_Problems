@@ -1,9 +1,10 @@
 class Solution {
     public boolean wordPattern(String pattern, String s) {
-        String[] words = s.split(" ");
+        //pattern "a b b a"
+        String[] words = s.split(" ");//[dog,cat,cat,fish]
         if (words.length != pattern.length()) return false;
 
-        HashMap<Character,String> mp = new HashMap<>();
+        HashMap<Character,String> mp = new HashMap<>();//
         HashSet<String> used = new HashSet<>();
 
         for (int i = 0; i < pattern.length(); i++) {
@@ -14,8 +15,8 @@ class Solution {
                 if (!mp.get(c).equals(w)) return false;
             } else {
                 if (used.contains(w)) return false;
-                mp.put(c, w);
-                used.add(w);
+                mp.put(c, w);//add the pair found
+                used.add(w);//add the word used
             }
         }
         return true;
