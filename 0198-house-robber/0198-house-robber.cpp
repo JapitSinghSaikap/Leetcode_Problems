@@ -55,18 +55,21 @@
 class Solution {
 public:
     int f(int ind,vector<int>& arr,vector<int>& dp){
+        //single dp
         int n=arr.size();
+        //out of bounds ki condition
         if(ind>=n) return 0;
         // if(ind<0) return 0;
         if(dp[ind]!=-1) return dp[ind];
+        //house  ki value bhi add krdo inlcude mein
         int pick=arr[ind]+f(ind+2,arr,dp);
+        //ismein value nhi li as it was not included
         int notpick=f(ind+1,arr,dp);
         return dp[ind]=max(pick,notpick);
     }
     int rob(vector<int>& nums) {
         int n=nums.size();
         vector<int> dp(n,-1);
-        
         return f(0,nums,dp);
     }
 };
