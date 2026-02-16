@@ -9,10 +9,10 @@ public:
         for(int i=n-1;i>=0;i--){
             long long count=0;
             int check=0;
-            if(s[i]=='7' || s[i]=='9') check=4;
+            if(str[i]=='7' || str[i]=='9') check=4;
             else check=3;
 
-            for(int j=i;j<n && j<i+check && s[j]==s[i];j++){
+            for(int j=i;j<n && j<i+check && str[j]==str[i];j++){
                 count=(count+dp[j+1])%MOD;
 
             }
