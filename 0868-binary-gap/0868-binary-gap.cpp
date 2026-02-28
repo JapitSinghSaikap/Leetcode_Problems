@@ -2,14 +2,14 @@ class Solution {
 public:
     int binaryGap(int n) {
         int last = -1, maxDist = 0, i = 0;
-        while (n > 0) {
-            if (n & 1) {
-                if (last != -1) {
-                    maxDist = max(maxDist, i - last);
+        while (n>0) {
+            if (n&1) {
+                if(last!=-1) {
+                    maxDist=max(maxDist,i-last);
                 }
-                last = i;
+                last=i;
             }
-            n >>= 1;
+            n>>=1;
             i++;
         }
         return maxDist;
