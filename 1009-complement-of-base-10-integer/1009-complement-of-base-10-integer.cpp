@@ -16,36 +16,41 @@
 //         return ans;
 //     }
 // };
-
 #include <bits/stdc++.h>
 using namespace std;
 
-string getBinary(int n){
-    if(n == 0) return "";
-    
-    string res = getBinary(n / 2);
-    
-    int bit = n % 2;
-    
-    if(bit == 0)
-        res += '1';   // flip
-    else
-        res += '0';
+class Solution {
+public:
+
+    string getBinary(int n){
+        if(n == 0) return "";
         
-    return res;
-}
-
-int binaryToDecimal(string s){
-    int num = 0;
-    
-    for(char c : s){
-        num = num * 2 + (c - '0');
+        string res = getBinary(n / 2);
+        
+        int bit = n % 2;
+        
+        if(bit == 0)
+            res += '1';
+        else
+            res += '0';
+            
+        return res;
     }
-    
-    return num;
-}
 
-int findComplement(int num) {
-    string flipped = getBinary(num);
-    return binaryToDecimal(flipped);
-}
+    int binaryToDecimal(string s){
+        int num = 0;
+        
+        for(char c : s){
+            num = num * 2 + (c - '0');
+        }
+        
+        return num;
+    }
+
+    int bitwiseComplement(int num) {
+        if(num == 0) return 1;
+
+        string flipped = getBinary(num);
+        return binaryToDecimal(flipped);
+    }
+};
