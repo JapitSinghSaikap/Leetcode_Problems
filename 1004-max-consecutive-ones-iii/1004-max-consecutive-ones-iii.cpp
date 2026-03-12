@@ -11,6 +11,7 @@ public:
                 if(nums[l]==0) count--;
                 l++;
             }
+            //window shift ke liye hai yeh
             maxlen = max(maxlen,r-l+1);
         }
         return maxlen;
