@@ -12,6 +12,6 @@ public:
             s*=1000;//move to the next range
         }
 
-        return count;
+        return k;
     }
 };
