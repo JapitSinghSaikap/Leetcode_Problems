@@ -10,7 +10,7 @@ public:
         for(char c : val){
             temp.push_back(c);
             solve(index+1,s,temp,mpp);
-            temp.pop_back();
+            temp.pop_back();//backtrack
         }
     }
     vector<string> letterCombinations(string s) {
