@@ -41,7 +41,9 @@ public:
          }
         }
         
+
         if(cnt!=cntFresh) return -1;
+
         return tm;
     }
 };
