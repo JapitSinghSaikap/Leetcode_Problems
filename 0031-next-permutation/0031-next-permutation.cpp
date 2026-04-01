@@ -1,6 +1,6 @@
 class Solution {
 public:
     void nextPermutation(vector<int>& nums) {
-            next_permutation(nums.begin(),nums.end());// its a library in cpp
+      next_permutation(nums.begin(),nums.end());   
     }
 };
