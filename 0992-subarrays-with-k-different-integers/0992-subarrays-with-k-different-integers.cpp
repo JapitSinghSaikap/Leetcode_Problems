@@ -5,10 +5,11 @@ public:
         int  l = 0;
         int cnt = 0;
         int n = nums.size();
-        for (int r = 0; r < n; r++) {
+        for (int r=0;r<n;r++) {
             mpp[nums[r]]++;
             while(mpp.size()>k){
                 mpp[nums[l]]--;
+                //uski freq zero kro then remove krdo mpp se
                 if(mpp[nums[l]]==0)
                 mpp.erase(nums[l]);
                 l++;
@@ -17,6 +18,7 @@ public:
         }
         return cnt;
     }
+    //and k k-1 pe check
     int subarraysWithKDistinct(vector<int>& nums, int k) {
         return subatmostk(nums,k)-subatmostk(nums,k-1);
     }
