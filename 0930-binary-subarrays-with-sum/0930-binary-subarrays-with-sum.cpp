@@ -16,6 +16,7 @@ public:
                 //yeh prefix sum wala part hai
                finalSum+=mpp[sum-goal];
             }
+            //mpp mein us sum ko add bhi kr rhe taki aage wale occurneces mein uska count le ske
             mpp[sum]++;
         }
         return finalSum;
