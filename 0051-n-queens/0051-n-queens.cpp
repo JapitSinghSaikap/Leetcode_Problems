@@ -35,7 +35,7 @@ public:
             if(isSafe(row,col,boards,n)){
                 boards[row][col]='Q';
                 solve(col+1,boards,n);
-                boards[row][col]='.';
+                boards[row][col]='.';//backtrack
             }
         }
     }
