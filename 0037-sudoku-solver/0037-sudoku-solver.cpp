@@ -12,7 +12,7 @@ public:
                         if (isValid(board, i, j, c)) {
                             board[i][j] = c;
                             if (solve(board)) return true;
-                            board[i][j] = '.';
+                            board[i][j] = '.';//backtracking
                         }
                     }
                     return false;
