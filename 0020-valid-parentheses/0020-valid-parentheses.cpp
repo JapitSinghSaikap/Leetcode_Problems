@@ -3,7 +3,7 @@ public:
     bool isValid(string s) {
         stack<char> st;
         for(int i=0; i<s.size(); i++){
-            if(s[i]=='(' || s[i]=='{' || s[i]=='['){
+            if(s[i]=='(' || s[i]=='{' || s[i]=='['){//agr opening aayegi tbhi push krdo stack mein
                 st.push(s[i]);
             }
             else{
