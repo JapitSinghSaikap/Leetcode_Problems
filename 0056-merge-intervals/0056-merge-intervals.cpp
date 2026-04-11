@@ -2,9 +2,9 @@ class Solution {
 public:
     vector<vector<int>> merge(vector<vector<int>>& intervals) {
         sort(intervals.begin(), intervals.end());
-        for(auto it: intervals){
-            cout<<it[0]<<" "<<it[1]<<endl;
-        }
+        // for(auto it: intervals){
+        //     cout<<it[0]<<" "<<it[1]<<endl;
+        // }
         vector<vector<int>> merged;
         vector<int> prev = intervals[0];
 
