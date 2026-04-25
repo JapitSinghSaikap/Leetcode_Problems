@@ -2,10 +2,9 @@ import java.util.*;
 
 class Solution {
     public List<List<String>> partition(String s) {
-
         List<List<String>> ans = new ArrayList<>();
         List<String> arr = new ArrayList<>();
-        part(s, arr, ans);
+        part(s,arr,ans);
         return ans;
     }
 
@@ -17,12 +16,12 @@ class Solution {
             return;
         }
 
-        for (int i = 1; i <= s.length(); i++) {
+        for (int i=1;i<=s.length();i++) {
             String part = s.substring(0, i);
             if (isPal(part)) {
                 arr.add(part);
-                part(s.substring(i), arr, ans); 
-                arr.remove(arr.size() - 1); 
+                part(s.substring(i),arr,ans); 
+                arr.remove(arr.size()-1); 
             }
         }
     }
