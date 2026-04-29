@@ -1,10 +1,10 @@
 class Solution {
 public:
     int subatmostk(vector<int>& nums, int k) {
+        int n=nums.size();
         unordered_map<int,int>mpp;
         int  l = 0;
         int cnt = 0;
-        int n = nums.size();
         for (int r=0;r<n;r++) {
             mpp[nums[r]]++;
             while(mpp.size()>k){
@@ -14,6 +14,7 @@ public:
                 mpp.erase(nums[l]);
                 l++;
             }
+            //yeh us particular range ke liye hai
             cnt += r-l+1;
         }
         return cnt;
